@@ -6,7 +6,12 @@
 <link rel="stylesheet" href="{% static 'port/abt.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-   
+  <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+            
+        </div>
     <body>
     <div id="fullpage">
 
@@ -18,7 +23,8 @@
       <div class="contact-form">
 
         <div id="form-messages"></div>
-        <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+        <form id="ajax-contact" action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
           <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s" >
             <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -33,7 +39,7 @@
 
           <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
             <textarea data-minlength="10" class="form-control" id ="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
-            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <span  class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div class="help-block with-errors"></div>
           </div>
 
@@ -55,11 +61,11 @@
     bottom: 10;
     height: 90px;
     background-color: white;
-    color: blue;
+    color: pink;
     padding: 0px 5px 0px 5px;
     margin-bottom: 30px;
     color: #FF6363;
-    transition: 0.5s;
+    transition: 0.50s;
     transform: translateY(-10px);
 }
 </style>
@@ -67,10 +73,10 @@
   <br>
   <div class="container">
   <p> Connect with me on</p>
-<a href="https://twitter.com/horlamiedea"><i class="fa fa-twitter" style="font-size:40px" ></i></a>
-<a href="https://github.com/horlamiedea"><i class="fa fa-github-alt" style="font-size:40px"></i></a>
-<a href="https://www.linkedin.com/in/olamide-ajayi-31901b199/"><i class="fa fa-linkedin" style="font-size:40px"></i></a>
-<a href="https://www.instagram.com/richmon.dd/"><i class="fa fa-instagram" style="font-size:40px"></i></a>
+<a href="https://twitter.com/horlamiedea" target="_blank"><i class="fa fa-twitter" style="font-size:40px" ></i></a>
+<a href="https://github.com/horlamiedea" target="_blank"><i class="fa fa-github-alt" style="font-size:40px"></i></a>
+<a href="https://www.linkedin.com/in/olamide-ajayi-31901b199/" target="_blank"><i class="fa fa-linkedin" style="font-size:40px"></i></a>
+<a href="https://www.instagram.com/richmon.dd/" target="_blank"><i class="fa fa-instagram" style="font-size:40px"></i></a>
 </div>
 </div>
  </div>
