@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Contact
 
 def blog(request):
@@ -17,6 +18,7 @@ def contact(request):
 
         c = Contact(name=name_r, email=email_r, message=message_r)
         c.save()
+        messages.success(request, f'Your message was sent successfully, please be patient while I reply or connect with me via socia media')
         return render(request, 'port/contact.html')
     else:
         return render(request, 'port/contact.html')

@@ -14,6 +14,14 @@
         </div>
     <body>
     <div id="fullpage">
+    <div class="container">
+    {% if messages %}
+     {% for message in messages %}
+     <div class='alert alert-{{ message.tags }}'>
+     {{ message }}
+     </div>
+     {% endfor %}
+    {% endif %}
 
      <div class="section" data-anchor="contact">
     <div class="content wow fadeInDown" data-wow-delay="0.2s">
@@ -78,6 +86,8 @@
 <a href="https://www.linkedin.com/in/olamide-ajayi-31901b199/" target="_blank"><i class="fa fa-linkedin" style="font-size:40px"></i></a>
 <a href="https://www.instagram.com/richmon.dd/" target="_blank"><i class="fa fa-instagram" style="font-size:40px"></i></a>
 </div>
+<a href="{% url 'about' %}"><i style="font-size:40px" class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+<a href="{% url 'blog' %}"><i style="font-size:40px" class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
 </div>
  </div>
     {% comment %} footer {% endcomment %}

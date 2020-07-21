@@ -1,15 +1,17 @@
 {% extends "port/base.html" %}
 {% load static %}
 {% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'port/abt.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <div id="loader-wrapper">
+    {% comment %} <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
             
-        </div>
+        </div> {% endcomment %}
         <body>
         <div id="fullpage">
         <div class="section" data-anchor="skills">
@@ -55,8 +57,10 @@
           <div class="skill-bar-percent">20%</div>
         </div> <!-- End Skill Bar -->
       </div>
-    </div>
+      <a href="{% url 'blog' %}"><i style="font-size:40px" class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+    <a href="{% url 'contact' %}"><i style="font-size:40px" class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
   </div>
+    </div>
   </div>
   <script type="text/javascript" src="{% static 'port/abt.js' %}"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

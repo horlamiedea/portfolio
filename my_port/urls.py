@@ -19,7 +19,7 @@ from port import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('olamide/', views.blog, name='blog'),
+    path('', views.blog, name='blog'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
 ]
