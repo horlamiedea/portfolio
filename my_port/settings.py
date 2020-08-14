@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q!bzcnpv+7tl36_$=j@l6j755(o*05f9t%3o$pui4o#pcrsoaz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['olamidea.herokuapp.com']
 
 
 # Application definition
