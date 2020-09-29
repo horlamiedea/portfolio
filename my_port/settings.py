@@ -26,7 +26,7 @@ SECRET_KEY = 'q!bzcnpv+7tl36_$=j@l6j755(o*05f9t%3o$pui4o#pcrsoaz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['olamidea.herokuapp.com']
+ALLOWED_HOSTS = ['olamidea.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -120,4 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'horlamiedea@gmail.com'
+EMAIL_HOST_PASSWORD = 'olamide141317'
+
 django_heroku.settings(locals())
